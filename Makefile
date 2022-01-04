@@ -1,7 +1,8 @@
 .PHONY: audit uninstall install test publish bundle
 
-TAP := j5pu/homebrew-dev
 FORMULA := bats-libs
+TAP := j5pu/homebrew-$(FORMULA)
+export HOMEBREW_NO_ENV_HINTS=1
 
 audit:
 	@brew audit --new --git --formula Formula/$(FORMULA).rb 2>&1 | grep -v "^Error: " || true
