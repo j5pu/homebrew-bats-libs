@@ -1,10 +1,10 @@
 # Bats-libs
 ![main](https://github.com/j5pu/homebrew-bats-libs/actions/workflows/main.yaml/badge.svg)
 
-Bats libs helper library.
+Bats libs helper library:
 
-* Installs [homebrew-bats-core](https://github.com/bats-core/homebrew-bats-core.git)
-* Installs `/usr/local/bin/bats-libs.bash` which source 
+* installs [homebrew-bats-core](https://github.com/bats-core/homebrew-bats-core.git) and
+* `/usr/local/bin/bats-libs.bash` which source 
 [bats-assert](https://github.com/bats-core/bats-assert.git), 
 [bats-file](https://github.com/bats-core/bats-file.git) and 
 [bats-support](https://github.com/bats-core/bats-support.git)
