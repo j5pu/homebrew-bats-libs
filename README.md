@@ -7,7 +7,7 @@ Bats libs helper library:
 * `/usr/local/bin/bats-libs.bash` which source 
 [bats-assert](https://github.com/bats-core/bats-assert.git), 
 [bats-file](https://github.com/bats-core/bats-file.git) and 
-[bats-support](https://github.com/bats-core/bats-support.git)
+[bats-support](https://github.com/bats-core/bats-support.git).
 
 ## How do I install these formulae?
 
