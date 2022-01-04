@@ -7,19 +7,24 @@ export HOMEBREW_NO_ENV_HINTS=1
 audit:
 	@brew audit --new --git --formula Formula/$(FORMULA).rb 2>&1 | grep -v "^Error: " || true
 
-uninstall: audit
+uninstall:
 	@brew uninstall $(TAP)/$(FORMULA)  2>/dev/null || true
 	@brew autoremove
 
-install: uninstall
+install: uninstall audit
 	@brew install --build-from-source --verbose $(TAP)/$(FORMULA)
 
 test: install
 	@brew test Formula/$(FORMULA).rb
 
+git:
+	@git config remote.origin.url git@github.com:$(TAP).git
+	@git all
+
 publish: test
 	@git config remote.origin.url git@github.com:$(TAP).git
 	@git all
 
-bundle: publish
+bundle: uninstall
 	@brew bundle --quiet --no-lock
+	@brew test $(FORMULA)
