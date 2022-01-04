@@ -21,10 +21,8 @@ git:
 	@git config remote.origin.url git@github.com:$(TAP).git
 	@git all
 
-publish: test
-	@git config remote.origin.url git@github.com:$(TAP).git
-	@git all
+publish: test git
 
-bundle: uninstall
+bundle: git uninstall
 	@brew bundle --quiet --no-lock
 	@brew test $(FORMULA)
