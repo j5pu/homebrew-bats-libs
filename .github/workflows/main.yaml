@@ -1,0 +1,24 @@
+name: test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Brew version output
+        run: brew --version
+      - name: Uninstall bats
+        run: brew uninstall bats
+      - name: Bats Libs audit
+        run: sh -c 'brew audit --new --git --formula Formula/bats-libs.rb || true'
+      - name: Bats Libs install
+        run: brew install --build-from-source --verbose bats-libs
+      - name: Bats Libs tests
+        run: brew test Formula/bats-libs.rb
