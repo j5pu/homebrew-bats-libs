@@ -1,2 +1,2 @@
-tap "j5pu/dev"
-brew "j5pu/dev/bats-libs"
+tap "j5pu/bats-libs"
+brew "j5pu/bats-libs/bats-libs"

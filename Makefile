@@ -8,8 +8,8 @@ audit:
 	@brew audit --new --git --formula Formula/$(FORMULA).rb 2>&1 | grep -v "^Error: " || true
 
 uninstall:
-	@brew uninstall $(TAP)/$(FORMULA)  2>/dev/null || true
-	@brew autoremove
+	@brew uninstall --quiet $(TAP)/$(FORMULA)  2>/dev/null || true
+	@brew autoremove --quiet
 
 install: uninstall audit
 	@brew install --build-from-source --verbose $(TAP)/$(FORMULA)
