@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DateStarted</key>
+	<date>2022-01-04T00:44:50Z</date>
+	<key>FileID</key>
+	<integer>240485537</integer>
+	<key>NameSpaceID</key>
+	<integer>1958705830</integer>
+	<key>NewPath</key>
+	<string>usr/local/Homebrew/Library/Taps/j5pu/homebrew-bats-libs/Formula</string>
+	<key>SourcePath</key>
+	<string>usr/local/Homebrew/Library/Taps/j5pu/homebrew-dev/Formula</string>
+</dict>
+</plist>
