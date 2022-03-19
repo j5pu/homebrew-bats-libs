@@ -36,7 +36,7 @@ class BatsLibs < Formula
 
   def install
     cellar.write <<~EOS
-      #!/bin/bash
+      #!/usr/bin/env bats
       load '#{homebrew_lib "bats-assert"}/load.bash'
       load '#{homebrew_lib "bats-file"}/load.bash'
       load '#{homebrew_lib "bats-support"}/load.bash'
