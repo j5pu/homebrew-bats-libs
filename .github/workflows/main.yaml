@@ -15,7 +15,8 @@ jobs:
       - name: Brew version output
         run: brew --version
       - name: Uninstall bats
-        run: brew uninstall bats
+        run: |
+          brew uninstall bats 2>/dev/null || true
       - name: Bats Libs audit
         run: sh -c 'brew audit --new --git --formula Formula/bats-libs.rb || true'
       - name: Bats Libs install
